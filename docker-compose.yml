@@ -1,0 +1,10 @@
+# Composeファイルの書式のバージョン
+version: "3"
+
+# サービスを定義
+services:
+  golang: # golangの定義
+    build: .  # ComposeFileを実行し、ビルドされるときのpathを定義
+    volumes: # マウントする設定ファイルのパスを定義
+      - ./:/go/src
+    tty: true # コンテナの永続化
